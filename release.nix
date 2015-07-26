@@ -15,5 +15,7 @@ in {
     '';
 
     installFlags = [ "DESTDIR=$(out)" ];
+
+    license = stdenv.lib.licenses.cc-by-sa-30;
   };
 }

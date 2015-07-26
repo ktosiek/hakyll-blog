@@ -6,5 +6,5 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   buildDepends = [ base hakyll ];
-  license = stdenv.lib.licenses.unfree;
+  license = stdenv.lib.licenses.cc-by-sa-30;
 }

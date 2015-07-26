@@ -1,9 +1,9 @@
-{ nixpkgs ? import <nixpkgs> {} }:
+{ pkgs ? import <nixpkgs> {} }:
 
 let
-  blog-generator = nixpkgs.haskellPackages.callPackage ./default.nix {};
+  blog-generator = pkgs.haskellPackages.callPackage ./default.nix {};
 in {
-  blog = with nixpkgs; stdenv.mkDerivation {
+  blog = with pkgs; stdenv.mkDerivation {
     name = "blog";
     src = ./.;
     buildPhase = ''
